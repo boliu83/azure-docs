@@ -179,7 +179,7 @@ Windows enables OutboundNAT by default. You can now manually disable OutboundNAT
 * You can't set cluster outbound type to LoadBalancer. You can set it to Nat Gateway or UDR:
   * [NAT Gateway](./nat-gateway.md): NAT Gateway can automatically handle NAT connection and is more powerful than Standard Load Balancer. You might incur extra charges with this option.
   * [UDR (UserDefinedRouting)](./limit-egress-traffic.md): You must keep port limitations in mind when configuring routing rules.
-  * If you need to switch from a load balancer to NAT Gateway, you can either add a NAT gateway into the VNet or run [`az aks upgrade`][aks-upgrade] to update the outbound type.
+  * If you need to switch from a load balancer to NAT Gateway, you can either add a NAT gateway into the VNet or run [`az aks update`][aks-update] to update the outbound type.
 
 > [!NOTE]
 > UserDefinedRouting has the following limitations:
@@ -225,7 +225,7 @@ For more information on Azure NAT Gateway, see [Azure NAT Gateway][nat-docs].
 [agic]: ../application-gateway/ingress-controller-overview.md
 [app-gw]: ../application-gateway/overview.md
 [upgrade-kubernetes]:tutorial-kubernetes-upgrade-cluster.md
-[aks-upgrade]: /cli/azure/aks#az-aks-update
+[aks-update]: /cli/azure/aks#az-aks-update
 [az-aks-create]: /cli/azure/aks#az-aks-create
 [az-aks-update]: /cli/azure/aks#az-aks-update
 [az-group-create]: /cli/azure/group#az_group_create
